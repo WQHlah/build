@@ -55,7 +55,7 @@ jobs:
           #patch -p1 < mini.patch
           curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash -s builtin
           # 配置内核
-          make O=../out ARCH=arm64 gulch_defconfig
+          make O=../out ARCH=arm64 dora_defconfig
           # 使用 Clang 编译内核
           make -j$(nproc --all) O=../out ARCH=arm64 \
               CC=clang \
