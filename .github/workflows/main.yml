@@ -45,9 +45,6 @@ jobs:
 
           # 进入内核目录并应用补丁
           cd kernel
-          - name: 应用内核补丁
-          run: |
-          cd kernel
           for patch in patches/*.patch; do
           echo "应用 $patch"
           patch -p1 -N < "$patch" || exit 1
