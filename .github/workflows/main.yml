@@ -44,6 +44,7 @@ jobs:
           export LLVM_IAS=1
 
           # 进入内核目录并应用补丁
+          set -x
           cd kernel
           for patch in patches/*.patch; do
           echo "应用 $patch"
